@@ -1,0 +1,48 @@
+{
+  "name": "nucleus",
+  "version": "0.1.0",
+  "description": "A collection of essential utilities designed to be the central and most important part of any Typescript Developer's toolkit.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest ./__tests__/*.spec.ts",
+    "coverage": "jest --coverage ./__tests__/*.spec.ts",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BehaveWare/nucleus.git"
+  },
+  "keywords": [],
+  "author": "BehaveWare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BehaveWare/nucleus/issues"
+  },
+  "homepage": "https://github.com/BehaveWare/nucleus#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.3.5"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "cSpell.words": [
+    "Entypo",
+    "FASTLANE",
+    "Fontisto",
+    "Ionicons",
+    "Pressable",
+    "Throughs",
+    "Upserted",
+    "Upserts",
+    "Walkthrough",
+    "Walkthroughs",
+    "behaveware",
+    "borderless",
+    "datetimepicker",
+    "dtos",
+    "flatlist",
+    "hacky",
+    "notoserif",
+    "openid",
+    "postversion",
+    "preversion",
+    "signup",
+    "swiper",
+    "testutils",
+    "unmount",
+    "userinfo"
+  ],
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
