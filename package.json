@@ -8,7 +8,7 @@
     "test": "jest ./__tests__/*.spec.ts",
     "test:coverage": "npm test -- --coverage ./__tests__/*.spec.ts",
     "test:badges": "npm run test:coverage  && jest-coverage-badges && npm run copybadges",
-    "copybadges": "cp ./coverage/badge-branches.svg ./docs/coverage/ && cp ./coverage/badge-functions.svg ./docs/coverage/ && cp ./coverage/badge-lines.svg ./docs/coverage/ && cp ./coverage/badge-statements.svg ./docs/coverage/",
+    "copybadges": "mkdir -p ./docs/coverage && cp ./coverage/badge-branches.svg ./docs/coverage/ && cp ./coverage/badge-functions.svg ./docs/coverage/ && cp ./coverage/badge-lines.svg ./docs/coverage/ && cp ./coverage/badge-statements.svg ./docs/coverage/",
     "docs": "typedoc --out docs src/index.ts --theme minimal",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
