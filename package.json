@@ -7,9 +7,9 @@
   "scripts": {
     "test": "jest ./__tests__/*.spec.ts",
     "test:coverage": "npm test -- --coverage ./__tests__/*.spec.ts",
-    "test:badges": "npm run test:coverage  && jest-coverage-badges && npm run copybadges",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges",
     "copybadges": "mkdir -p ./docs/coverage && cp ./coverage/badge-branches.svg ./docs/coverage/ && cp ./coverage/badge-functions.svg ./docs/coverage/ && cp ./coverage/badge-lines.svg ./docs/coverage/ && cp ./coverage/badge-statements.svg ./docs/coverage/",
-    "docs": "typedoc --out docs src/index.ts --theme minimal",
+    "docs": "typedoc --out docs src/index.ts --theme minimal && npm run copybadges",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
