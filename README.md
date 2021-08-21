@@ -2,6 +2,8 @@
 
 A collection of essential utilities designed to be the central and most important part of any Typescript Developer's toolkit.
 
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 ## Test Coverage
 
 ![badge-branches](./coverage/badge-branches.svg) ![badge-functions](./coverage/badge-functions.svg) ![badge-lines](./coverage/badge-lines.svg) ![badge-statements](./coverage/badge-statements.svg)

@@ -1,4 +1,10 @@
-import { batchArray, equalAsStrings } from "../src";
+import {
+  batchArray,
+  compareArrays,
+  equalAsStrings,
+  arraysAreEqual,
+} from "../src";
+import { IComparable } from "../src/types";
 
 describe("batchArray", () => {
   it("should return an empty T[][] if an empty array is passed in", () => {
@@ -45,6 +51,60 @@ describe("batchArray", () => {
   });
 });
 
+describe("compareArrays", () => {
+  it("should determine the two arrays are NOT equal", () => {
+    // Arrange
+    const arrayA = createIComparableArray();
+    const arrayB = createIComparableArray();
+    arrayB.push(createIComparable("not equal anymore"));
+
+    // Act
+    const result = compareArrays(arrayA, arrayB);
+
+    // Assert
+    expect(result).toBe(false);
+  });
+
+  it("should determine the two arrays are equal", () => {
+    // Arrange
+    const arrayA = createIComparableArray();
+    const arrayB = createIComparableArray();
+
+    // Act
+    const result = compareArrays(arrayA, arrayB);
+
+    // Assert
+    expect(result).toBe(true);
+  });
+});
+
+describe("arraysAreEqual", () => {
+  it("should determine the arrays are not equal", () => {
+    // Arrange
+    const arrayA = createMixedArray();
+    const arrayB = createMixedArray();
+    arrayB.push("not equal anymore");
+
+    // Act
+    const result = arraysAreEqual(arrayA, arrayB, equalAsStrings);
+
+    // Assert
+    expect(result).toBe(false);
+  });
+
+  it("should determine the arrays are equal", () => {
+    // Arrange
+    const arrayA = createMixedArray();
+    const arrayB = createMixedArray();
+
+    // Act
+    const result = arraysAreEqual(arrayA, arrayB, equalAsStrings);
+
+    // Assert
+    expect(result).toBe(true);
+  });
+});
+
 const createMixedArray = () => [
   9,
   10,
@@ -54,3 +114,19 @@ const createMixedArray = () => [
   10.34,
   { happy: "sure" },
 ];
+
+const createIComparableArray = (): IComparable<any>[] => [
+  createIComparable("test"),
+  createIComparable("moreTests"),
+];
+
+const createIComparable = (value: string): SimpleComparable => {
+  return {
+    value,
+    equals: (object: any) => object.value === value,
+  };
+};
+
+interface SimpleComparable extends IComparable<SimpleComparable> {
+  value: string;
+}
