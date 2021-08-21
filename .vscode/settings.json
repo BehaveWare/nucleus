@@ -26,6 +26,7 @@
     "signup",
     "swiper",
     "testutils",
+    "typedoc",
     "unmount",
     "userinfo"
   ],

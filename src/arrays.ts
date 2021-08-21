@@ -2,13 +2,13 @@ import { IComparable } from "./types";
 
 /**
  * Breaks an array T[] into an array of batches T[][]
- * @param array Array to break into batches
- * @param batchSize Size of the batches
+ * @param {T[]} [array] Array to break into batches
+ * @param {number} [batchSize = 0] Size of the batches
  * @returns An array of batches: T[][]
  */
 export const batchArray = <T>(
   array: T[],
-  batchSize: number,
+  batchSize: number = 0,
 ): T[][] => {
   if (array.length === 0) {
     return [];

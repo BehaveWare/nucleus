@@ -21,3 +21,11 @@ export const foreachParallelAsync = async <T>(
     await Promise.all(promises);
   }
 };
+
+export const mapParallelAsync = async <T, TT>(
+  array: T[],
+  actionAsync: (element: T) => Promise<TT>,
+  batchSize?: number,
+) => {
+  const batches: T[][] = batchArray(array, batchSize || 0);
+};
