@@ -8,7 +8,7 @@
     "test": "jest ./__tests__/*.spec.ts",
     "test:coverage": "npm test -- --coverage ./__tests__/*.spec.ts",
     "test:badges": "npm run test:coverage  && jest-coverage-badges",
-    "docs": "typedoc --out docs src/index.ts",
+    "docs": "typedoc --out docs src/index.ts --theme ./node_modules/typedoc-theme-dark/dist/dark/",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
@@ -33,12 +33,13 @@
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "jest": "^27.0.6",
-    "jest-coverage-badges": "^1.1.2",
+    "jest-coverage-badges": "^1.0.0",
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.5",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.21.6",
+    "typedoc-theme-dark": "^0.0.5",
     "typescript": "^4.3.5"
   },
   "jest": {
