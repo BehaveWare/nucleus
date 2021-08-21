@@ -16,26 +16,32 @@ Documentation is currently inside the code. All exported functions have a commen
 
 ## Getting Started for Contributors
 
-- Pull down repository:
+Pull down repository:
 
-  ```shell
-  git clone https://github.com/BehaveWare/nucleus.git
-  ```
+```shell
+git clone https://github.com/BehaveWare/nucleus.git
+```
 
-- Run all unit tests:
+Run all unit tests ([JEST](https://jestjs.io/)):
 
-  ```shell
-  npm test
-  ```
+```shell
+npm test
+```
 
-- Run all tests with coverage:
+Run all tests with coverage:
 
-  ```shell
-  npm run coverage
-  ```
+```shell
+npm run coverage
+```
 
-- Run the linter:
+Run linter ([TSLint](https://palantir.github.io/tslint/)):
 
-  ```shell
-  npm run lint
-  ```
+```shell
+npm run lint
+```
+
+Run formatter ([Prettier](https://prettier.io/)):
+
+```shell
+npm run format
+```
