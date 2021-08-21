@@ -6,12 +6,14 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest ./__tests__/*.spec.ts",
-    "coverage": "jest --coverage ./__tests__/*.spec.ts",
+    "test:coverage": "npm test -- --coverage ./__tests__/*.spec.ts",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges",
+    "badges": "jest-coverage-badges",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm run test:badges && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
@@ -30,6 +32,7 @@
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "jest": "^27.0.6",
+    "jest-coverage-badges": "^1.1.2",
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.5",
     "tslint": "^6.1.3",
@@ -37,7 +40,12 @@
     "typescript": "^4.3.5"
   },
   "jest": {
-    "preset": "ts-jest"
+    "preset": "ts-jest",
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
