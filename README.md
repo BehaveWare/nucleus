@@ -22,7 +22,7 @@ Pull down repository:
 git clone https://github.com/BehaveWare/nucleus.git
 ```
 
-Run all unit tests ([JEST](https://jestjs.io/)):
+Run all unit tests ([JEST](https://jestjs.io/){:target="\_blank"}):
 
 ```shell
 npm test
@@ -34,13 +34,13 @@ Run all tests with coverage:
 npm run coverage
 ```
 
-Run linter ([TSLint](https://palantir.github.io/tslint/)):
+Run linter ([TSLint](https://palantir.github.io/tslint/){:target="\_blank"}):
 
 ```shell
 npm run lint
 ```
 
-Run formatter ([Prettier](https://prettier.io/)):
+Run formatter ([Prettier](https://prettier.io/){:target="\_blank"}):
 
 ```shell
 npm run format
