@@ -22,14 +22,30 @@ export interface ISerializable {
   toJSON: () => string;
 }
 
+/**
+ * Interface for an Event Emitter
+ */
 export interface IEmitter {
-  emit: (event: string, payload: any) => void;
+  /**
+   * Emits an event with an optional payload
+   * @param event Name of the event to be emitted
+   * @param payload Payload of data to be sent to subscribers
+   */
+  emit: (event: string, payload?: any) => void;
 }
 
+/**
+ * Interface for an Event Subscriber
+ */
 export interface ISubscriber<TSubscription> {
+  /**
+   * Adds a listener for an event
+   * @param event Name of the event to listen for
+   * @param listener Function to be called when the event is emitted
+   */
   addListener: (
     event: string,
-    listener: (data: any) => void,
+    listener: (data?: any) => void,
   ) => TSubscription;
 }
 

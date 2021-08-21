@@ -29,7 +29,7 @@ export const foreachParallelAsync = async <T>(
  * @param array Array to map
  * @param mapAsync Mapping function
  * @param batchSize Size of batches for dealing with large arrays
- * @returns
+ * @returns A promise with the mapped array of type TT[]
  */
 export const mapParallelAsync = async <T, TT>(
   array: T[],
