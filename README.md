@@ -6,7 +6,7 @@ A collection of essential utilities designed to be the central and most importan
 
 ## Test Coverage
 
-![badge-branches](./coverage/badge-branches.svg) ![badge-functions](./coverage/badge-functions.svg) ![badge-lines](./coverage/badge-lines.svg) ![badge-statements](./coverage/badge-statements.svg)
+![badge-branches](coverage/badge-branches.svg) ![badge-functions](coverage/badge-functions.svg) ![badge-lines](coverage/badge-lines.svg) ![badge-statements](coverage/badge-statements.svg)
 
 ## Getting Started
 
