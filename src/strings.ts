@@ -25,9 +25,24 @@ export const filenameFrom = (path: string) => {
   return tempPath.replace(/^.*[\\\/]/, "");
 };
 
+/**
+ * Determines if text is an integer
+ * @param text Text to check
+ * @returns Whether or not the text is an integer
+ */
 export const isInteger = (text: string) => integerPattern.test(text);
 
+/**
+ * Determines if text is an email
+ * @param text Text to check
+ * @returns Whether or not the text is an email
+ */
 export const isEmail = (text: string) => emailPattern.test(text);
 
+/**
+ * Determines if text is a phone number
+ * @param text Text to check
+ * @returns Whether or not the text is a phone number
+ */
 export const isPhoneNumber = (text: string) =>
   phonePattern.test(text);
