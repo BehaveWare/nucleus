@@ -37,7 +37,7 @@ npm test
 Run all tests with coverage:
 
 ```shell
-npm run coverage
+npm run test:coverage
 ```
 
 Run linter ([TSLint](https://palantir.github.io/tslint/)):
