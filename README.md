@@ -18,7 +18,7 @@ npm install --save @behaveware/nucleus
 
 ### Documentation
 
-Documentation is currently inside the code. All exported functions have a comment included that will show up in your text editor explaining the function's purpose as well as its parameters and return value. External documentation will be coming in the future, reach out to the maintainers if you are interested in contributing external documentation.
+Documentation is currently inside the code and is exported using [TypeDoc](https://typedoc.org/) and can be found [here](./docs/index.html)
 
 ## Getting Started for Contributors
 
