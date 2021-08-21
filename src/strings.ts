@@ -8,7 +8,7 @@ export const capitalize = (word: string) =>
 
 /**
  * Retrieves the filename from a path
- * @param path Path to get the file name from (can be a filepath or url)
+ * @param path Filepath or Url to retrieve the filename from
  * @returns A filename
  */
 export const filenameFrom = (path: string) => {
