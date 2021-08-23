@@ -22,10 +22,9 @@ describe("batchArray", () => {
   it("should return an array with one value (the original array) if batchSize is 0", () => {
     // Arrange
     const array: any[] = createMixedArray();
-    const batchSize: number = 0;
 
     // Act
-    const result = batchArray(array, batchSize);
+    const result = batchArray(array);
 
     // Assert
     expect(result.length).toBe(1);
