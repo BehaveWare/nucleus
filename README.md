@@ -20,7 +20,7 @@ npm install --save @behaveware/nucleus
 
 ### Documentation
 
-Documentation is currently inside the code and is exported using [TypeDoc](https://typedoc.org/) and can be found [here](./docs/index.html)
+Documentation is currently inside the code and is exported using [TypeDoc](https://typedoc.org/) and can be found [here](https://behaveware.github.io/nucleus/)
 
 ```shell
 # Refresh Documentation and Coverage Badges
