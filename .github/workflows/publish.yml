@@ -36,7 +36,7 @@ jobs:
         run: |
           export NPM_AUTH_TOKEN=$NPM_AUTH_TOKEN
           npm install
-          git commit -am "build package lock"
+          git status --porcelain && git commit -am "build package lock"
 
       - name: Create New Version
         env:
