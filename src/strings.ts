@@ -40,7 +40,14 @@ export const isInteger = (text: string) => integerPattern.test(text);
 export const isEmail = (text: string) => emailPattern.test(text);
 
 /**
- * Determines if text is a phone number
+ * Determines if text is a phone number.
+ * Based the solution found [here](https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s02.html).
+ *
+ * Usage:
+ * ```
+ * const result: boolean = isPhoneNumber("555-555-555");
+ * console.log(result); // true
+ * ```
  * @param text Text to check
  * @returns Whether or not the text is a phone number
  */
