@@ -111,9 +111,15 @@ describe("isPhoneNumber", () => {
 
   it("should determine phone numbers are just that", () => {
     // Arrange
-    // TODO: Needs to cover:
-    // "5555555", "(555)555-5555" and any other valid phone format
-    ["555-555-5555", "555 555 5555"].map((phoneNumber) => {
+    [
+      "555-555-5555",
+      "555 555 5555",
+      "(555)555-5555",
+      "5555555555",
+      "555.555.5555",
+      "(555) 555-5555",
+      "(555) 555 5555",
+    ].map((phoneNumber) => {
       // Act
       const result = isPhoneNumber(phoneNumber);
 
