@@ -30,7 +30,7 @@ export const capitalize = (word: string) =>
  * const nameFromUrl: string = filenameFrom("https://www.behaveware.org/test.jpeg");
  * console.log(nameFromUrl); // test.jpeg
  *
- * const nameFromFilepath: string = filenameFrom("C:\behaveware\nucleus\test.jpeg");
+ * const nameFromFilepath: string = filenameFrom("C:\\behaveware\\nucleus\\test.jpeg");
  * console.log(nameFromFilepath); // test.jpeg
  * ```
  */
