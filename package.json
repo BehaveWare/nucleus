@@ -13,7 +13,7 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "refreshdocs": "git diff --exit-code && git diff --cached --exit-code && npm run prepublishOnly && npm run format && git add . && git commit -m \"refreshed documentation\"",
+    "refreshdocs": "git diff --exit-code && git diff --cached --exit-code && npm run prepublishOnly && npm run format && git add . && git commit -m \"refreshed documentation\" && git push",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test:badges && npm run lint && npm run docs",
     "preversion": "npm run lint",
