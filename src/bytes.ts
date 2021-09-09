@@ -20,6 +20,15 @@ export const TERABYTE_SIZE = GIGABYTE_SIZE * KILOBYTE_SIZE;
 
 /**
  * Trim the Buffer to a max size in bytes.
+ *
+ * **Example:**
+ * ```
+ * const buffer = Buffer.from("nucleus");
+ * console.log(buffer.byteLength); // 7
+ *
+ * const trimmedBuffer = trimBuffer(buffer, 4);
+ * console.log(trimmedBuffer.byteLength); // 4
+ * ```
  * @param buffer Buffer to be trimmed
  * @param maxSize Max size in bytes to trim to
  * @returns The trimmed Buffer
@@ -30,12 +39,18 @@ export const trimBuffer = (buffer: Buffer, maxSize: number) => {
     return buffer;
   }
 
-  const endIndex = buffer.length - buffer.length * ratio;
+  const endIndex = buffer.length * ratio;
   return buffer.slice(0, endIndex);
 };
 
 /**
  * Converts bytes to kilobytes.
+ *
+ * **Example:**
+ * ```
+ * const kilobytes = toKilobytes(1024);
+ * console.log(kilobytes); // 1
+ * ```
  * @param bytes Number of bytes
  * @returns Number of kilobytes
  */
@@ -43,6 +58,12 @@ export const toKilobytes = (bytes: number) => bytes / KILOBYTE_SIZE;
 
 /**
  * Converts bytes to megabytes.
+ *
+ * **Example:**
+ * ```
+ * const megabytes = toMegabytes(1024 * 1024);
+ * console.log(megabytes); // 1
+ * ```
  * @param bytes Number of bytes
  * @returns Number of megabytes
  */
@@ -50,6 +71,12 @@ export const toMegabytes = (bytes: number) => bytes / MEGABYTE_SIZE;
 
 /**
  * Converts bytes to gigabytes.
+ *
+ * **Example:**
+ * ```
+ * const gigabytes = toGigabytes(1024 * 1024 * 1024);
+ * console.log(gigabytes); // 1
+ * ```
  * @param bytes Number of bytes
  * @returns Number of gigabytes
  */
@@ -57,6 +84,12 @@ export const toGigabytes = (bytes: number) => bytes / GIGABYTE_SIZE;
 
 /**
  * Converts bytes to terabytes.
+ *
+ * **Example:**
+ * ```
+ * const terabytes = toTerabytes(1024 * 1024 * 1024 * 1024);
+ * console.log(terabytes); // 1
+ * ```
  * @param bytes Number of bytes
  * @returns Number of terabytes
  */
