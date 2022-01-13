@@ -32,22 +32,22 @@ jobs:
 
       - name: Restore Packages
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_ACCESS_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
-          export NPM_AUTH_TOKEN=$NPM_AUTH_TOKEN
+          export NPM_ACCESS_TOKEN=$NPM_ACCESS_TOKEN
           npm install
           git commit -am "pkg lock"
 
       - name: Create New Version
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_ACCESS_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
-          export NPM_AUTH_TOKEN=$NPM_AUTH_TOKEN
+          export NPM_ACCESS_TOKEN=$NPM_ACCESS_TOKEN
           npm version ${{ github.event.inputs.level }}
 
       - name: Publish Release
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_ACCESS_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
-          export NPM_AUTH_TOKEN=$NPM_AUTH_TOKEN
+          export NPM_ACCESS_TOKEN=$NPM_ACCESS_TOKEN
           npm publish --access public
