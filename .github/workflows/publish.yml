@@ -48,6 +48,10 @@ jobs:
       - name: Publish Release
         env:
           NPM_ACCESS_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+          NPM_EMAIL: ${{ secrets.NPM_EMAIL }}
         run: |
           export NPM_ACCESS_TOKEN=$NPM_ACCESS_TOKEN
+          export NPM_EMAIL=$NPM_EMAIL
+          echo "_auth = $NPM_ACCESS_TOKEN" > ~/.npmrc
+          echo "email = $NPM_EMAIL" >> ~/.npmrc
           npm publish --access public
