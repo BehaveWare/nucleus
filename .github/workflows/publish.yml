@@ -54,7 +54,4 @@ jobs:
         run: |
           export NPM_ACCESS_TOKEN=$NPM_ACCESS_TOKEN
           export NPM_EMAIL=$NPM_EMAIL
-          export NPM_PASSWORD=$NPM_PASSWORD
-          export NPM_USERNAME=$NPM_USERNAME
-          ./scripts/add-user.sh
           npm publish --access public
