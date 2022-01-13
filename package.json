@@ -1,6 +1,6 @@
 {
   "name": "@behaveware/nucleus",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "A collection of essential utilities designed to be the central and most important part of any Typescript Developer's toolkit.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
