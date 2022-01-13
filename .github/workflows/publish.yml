@@ -50,4 +50,4 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: |
           export NPM_AUTH_TOKEN=$NPM_AUTH_TOKEN
-          npm publish --access public
+          npm publish
