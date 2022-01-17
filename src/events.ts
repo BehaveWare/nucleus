@@ -1,10 +1,4 @@
-import {
-  AppEventPrefix,
-  EventName,
-  EventPrefix,
-  IEmitter,
-  ISubscriber,
-} from "./types";
+import { IEmitter, ISubscriber } from "./types";
 
 /**
  * Creates an event name
@@ -14,10 +8,10 @@ import {
  * @returns The event name
  */
 export const createEventName = (
-  appPrefix: AppEventPrefix,
-  prefix: EventPrefix,
+  appPrefix: string,
+  prefix: string,
   name: string,
-): EventName => `${appPrefix}:${prefix}:${name}`;
+): string => `${appPrefix}:${prefix}:${name}`;
 
 /**
  * Emits an event with a payload
@@ -26,7 +20,7 @@ export const createEventName = (
  * @param emitter Event emitter
  */
 export const emit = <T>(
-  event: EventName,
+  event: string,
   payload: T,
   emitter: IEmitter,
 ) => emitter.emit(event, payload);
@@ -39,7 +33,7 @@ export const emit = <T>(
  * @returns An event subscription
  */
 export const addListener = <T, TSubscription>(
-  event: EventName,
+  event: string,
   callback: (message: T) => void,
   subscriber: ISubscriber<TSubscription>,
 ): TSubscription => subscriber.addListener(event, callback);

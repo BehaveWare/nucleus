@@ -48,19 +48,3 @@ export interface ISubscriber<TSubscription> {
     listener: (data?: any) => void,
   ) => TSubscription;
 }
-
-/**
- * Application prefix for an event name
- */
-export type AppEventPrefix = string;
-
-/**
- * Prefix for an event name usually the screen, page, service, etc.
- */
-export type EventPrefix = string;
-
-/**
- * Name of an event matching the format of:
- * `AppEventPrefix:EventPrefix:string`
- */
-export type EventName = `${AppEventPrefix}:${EventPrefix}:${string}`;

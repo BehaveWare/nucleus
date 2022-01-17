@@ -1,4 +1,4 @@
-import { AppEventPrefix, EventName, EventPrefix, IEmitter, ISubscriber } from "./types";
+import { IEmitter, ISubscriber } from "./types";
 /**
  * Creates an event name
  * @param appPrefix Application prefix of the event name
@@ -6,14 +6,14 @@ import { AppEventPrefix, EventName, EventPrefix, IEmitter, ISubscriber } from ".
  * @param name Name of the event
  * @returns The event name
  */
-export declare const createEventName: (appPrefix: AppEventPrefix, prefix: EventPrefix, name: string) => EventName;
+export declare const createEventName: (appPrefix: string, prefix: string, name: string) => string;
 /**
  * Emits an event with a payload
  * @param event Name of event to emit
  * @param payload Payload of data to send to subscribers
  * @param emitter Event emitter
  */
-export declare const emit: <T>(event: EventName, payload: T, emitter: IEmitter) => void;
+export declare const emit: <T>(event: string, payload: T, emitter: IEmitter) => void;
 /**
  * Adds a listener for a given event and creates a subscription
  * @param event Name of event to subscribe to
@@ -21,4 +21,4 @@ export declare const emit: <T>(event: EventName, payload: T, emitter: IEmitter) 
  * @param subscriber Event subscriber
  * @returns An event subscription
  */
-export declare const addListener: <T, TSubscription>(event: EventName, callback: (message: T) => void, subscriber: ISubscriber<TSubscription>) => TSubscription;
+export declare const addListener: <T, TSubscription>(event: string, callback: (message: T) => void, subscriber: ISubscriber<TSubscription>) => TSubscription;
