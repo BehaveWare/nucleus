@@ -36,7 +36,7 @@ export const TERABYTE_SIZE = GIGABYTE_SIZE * KILOBYTE_SIZE;
 export const trimBuffer = (buffer: Buffer, maxSize: number) => {
   const ratio = maxSize / buffer.byteLength;
   if (ratio >= 1) {
-    return buffer;
+    return buffer.slice(0);
   }
 
   const endIndex = buffer.length * ratio;
